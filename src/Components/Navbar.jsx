@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
-
+import { RiGithubFill } from "react-icons/ri";
+import logo from '../assets/ui/assets/logo.png'
 const Navbar = () => {
     return (
         <div>
@@ -13,18 +14,18 @@ const Navbar = () => {
       
        
     </div>
-    <a className="btn btn-ghost text-xl text">HERO.IO</a>
+    <a className="btn btn-ghost text-xl text"><img className='w-8 h-8' src={logo}/>HERO.IO</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><NavLink to='/' className='text'>Home</NavLink></li>
-      <li><NavLink to='/trendingapp' className='text'>Apps</NavLink></li>
-      <li><NavLink to='/application' className='text'>Installation</NavLink></li>
+      <li><NavLink to='/trendingapp' >Apps</NavLink></li>
+      <li><NavLink to='/application' >Installation</NavLink></li>
       
     </ul>
   </div>
   <div className="navbar-end">
-    <NavLink className="btn">Contribute</NavLink>
+    <NavLink className="btn btn-color"><RiGithubFill />Contribute</NavLink>
   </div>
 </div>  
         </div>
