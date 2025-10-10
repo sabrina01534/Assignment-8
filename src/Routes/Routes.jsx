@@ -5,18 +5,21 @@ import RootLayout from "../Layouts/RootLayout";
 import ErrorPage from "../Pages/ErrorPage";
 import Application from "../Pages/Application";
 import TrendingApp from "../Pages/TrendingApp";
+import AppDetails from "../Components/AppDetails";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    hydrateFallbackElement:<p>Loading....</p>,
+     errorElement:<ErrorPage></ErrorPage>,
     children:[
        {
     index:true,
     element: <Home></Home>,
-    loader:()=>fetch('./Data.json')
+    
+    loader:()=>fetch('./Data.json'),
   },
    
   {
@@ -25,12 +28,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/trendingapp",
+    loader:()=>fetch('./Data.json'),
+    hydrateFallbackElement:<p>Loading....</p>,
     element: <TrendingApp></TrendingApp>,
   },
   {
     path: "/products",
     element: <Products></Products>,
   },
+  {
+    path:'/apps/:id',
+    element:<AppDetails></AppDetails>
+  }
     ]
   },
  

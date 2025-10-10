@@ -1,15 +1,15 @@
 import React from 'react';
-
+import logo from '../assets/ui/assets/logo.png'
 const Footer = () => {
     return (
        
           
    
   <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
-   <p>
+   <div className='flex'><img className='w-8 h-8' src={logo}/><p className='p-1.5'>
       HERO.IO
       
-    </p>
+    </p></div>
   <aside className=" items-center">
     
     <p >Copyright © {new Date().getFullYear()} - All right reserved</p>
