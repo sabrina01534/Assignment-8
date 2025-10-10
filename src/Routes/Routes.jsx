@@ -24,11 +24,12 @@ const router = createBrowserRouter([
    
   {
     path: "/application",
+    loader:()=>fetch('./Data.json'),
     element: <Application></Application>,
   },
   {
     path: "/trendingapp",
-    loader:()=>fetch('./Data.json'),
+    // loader:()=>fetch('./Data.json'),
     hydrateFallbackElement:<p>Loading....</p>,
     element: <TrendingApp></TrendingApp>,
   },

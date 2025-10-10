@@ -9,7 +9,7 @@ const Card = ({app}) => {
     return (
         <div>
           
-           <div className="card bg-base-100 border hover:scale-105 shadow-sm">
+           <div className="card bg-base-100 border  shadow-sm">
   <figure className='h-45 overflow-hidden '>
     <img className='w-full object-cover'
       src={app?.image }
@@ -26,21 +26,12 @@ const Card = ({app}) => {
       <div className="badge badge-outline"><img className='h-5 w-5' src={downloadsImg}/>{ app?.downloads}</div>
       <div className="badge badge-outline"><img className='h-5 w-5' src={ratingsImg}/> ratings </div>
     
-        {/* <div><img src={ratingsImg}/>
-        {ratings.map((ratings,index)=>
-          (<Card key={index} ratings={ratigs}></Card>)
-        )
         
-        }
-        </div> */}
         <Link to={`/apps/${id}`} className='btn-color'>View Details</Link>
     </div>
   </div>
   
 </div> 
-
-        
-
         </div>
         
     );

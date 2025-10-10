@@ -23,7 +23,7 @@ const Home = () => {
 <div><button className='border-1 flex'><FaGooglePlay />Google Play</button></div>
 <div><button className='border-1 flex'><FaAppStoreIos />App Store</button></div>
 </div>
-<div><img className='justify-center w-90 h-90' src={hero}/></div>
+<div className='justify-center'><img className='s w-90 h-90' src={hero}/></div>
 <div className='bg-color'>
     <div className='pt-10'>
     <h1 className='text-center font-bold text-3xl n-text '>Trusted by Millions, Built for You</h1>
@@ -58,7 +58,7 @@ const Home = () => {
     ))
     }
 </div>
-<button className=' justify-center btn-color border p-1 '>Show All</button>
+<div><button className=' justify-center btn-color border p-1 '>Show All</button></div>
    </div>
 
 
